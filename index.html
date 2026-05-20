@@ -1,300 +1,1274 @@
-<!DOCTYPE html>            
-<html lang="en">            
-<head>            
-<meta charset="UTF-8">            
-<meta name="viewport" content="width=device-width, initial-scale=1.0">            
-            
-<!-- Google Verification -->            
-<meta name="google-site-verification" content="p88x7nh6BYMczeCDmWaq9lM8USkiXIBAYRTweQ-8PdE" />            
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TIAI - Technology of Indian Artificial Intelligence</title>
+    <meta name="description" content="TIAI is an AI company focused on Artificial Intelligence, automation, and intelligent systems." />
+    <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/jadhavranjana148-coder/TIAI/main/favicon.png" />
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
 
-<!-- Logo -->
-<link rel="icon" type="image/png" href="favicon.png">
-            
-<!-- SEO META -->            
-<meta name="description" content="TIAI is an AI company founded by Soham Jadhav in 2026, focused on Artificial Intelligence, automation, and web development.">            
-<meta name="keywords" content="TIAI, Soham Jadhav, AI company, Artificial Intelligence India, TIAI AI">            
-<meta name="author" content="Soham Jadhav">            
-<meta property="og:title" content="TIAI - AI Company by Soham Jadhav">            
-<meta property="og:description" content="TIAI is an AI company focused on Artificial Intelligence, automation, and intelligent systems.">            
-<meta property="og:image" content="https://jadhavranjana148-coder.github.io/TIAI/-1.png">            
-<title>TIAI - Technology of Indian Artificial Intelligence</title>            
-            
-<!-- AI STRUCTURED DATA -->            
-<script type="application/ld+json">            
-{            
-  "@context": "https://schema.org",            
-  "@type": "Organization",            
-  "name": "TIAI",            
-  "url": "https://jadhavranjana148-coder.github.io/TIAI/",            
-  "founder": "Soham Jadhav",            
-  "foundingDate": "2026",            
-  "description": "Technology of Indian Artificial Intelligence is an AI company focused on intelligent tools."            
-}            
-</script>            
-            
-<style>            
-body {            
-    margin: 0;            
-    font-family: 'Segoe UI', sans-serif;            
-    background: #020617;            
-    color: white;            
-    scroll-behavior: smooth;            
-}            
-            
-header {            
-    display: flex;            
-    justify-content: space-between;            
-    padding: 20px 40px;            
-    background: black;            
-    border-bottom: 1px solid cyan;            
-}            
-            
-header h1 {            
-    color: cyan;            
-}            
-            
-nav a {            
-    margin: 0 10px;            
-    text-decoration: none;            
-    color: white;            
-}            
-            
-.hero {            
-    text-align: center;            
-    padding: 80px 20px;            
-}            
-            
-.hero img {            
-    width: 200px;            
-    margin-bottom: 20px;            
-}            
-            
-.hero h2 {            
-    font-size: 45px;            
-}            
-            
-.hero p {            
-    color: #94a3b8;            
-    max-width: 600px;            
-    margin: auto;            
-}            
-            
-.btn {            
-    margin-top: 20px;            
-    padding: 12px 25px;            
-    background: cyan;            
-    color: black;            
-    border: none;            
-    cursor: pointer;            
-    font-weight: bold;            
-}            
-            
-.section {            
-    padding: 60px 20px;            
-    text-align: center;            
-}            
-            
-.cards {            
-    display: flex;            
-    flex-wrap: wrap;            
-    justify-content: center;            
-}            
-            
-.card {            
-    background: #1e293b;            
-    margin: 15px;            
-    padding: 25px;            
-    border-radius: 15px;            
-    width: 250px;            
-    transition: 0.3s;            
-}            
-            
-.card:hover {            
-    transform: scale(1.05);            
-}            
-            
-footer {            
-    text-align: center;            
-    padding: 20px;            
-    background: black;            
-    color: gray;            
-}
-.popup {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.8);
-    justify-content: center;
-    align-items: center;
-}
+    <!-- Tailwind CSS Dynamic Compilation CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              display: ['Space Grotesk', 'sans-serif'],
+              mono: ['JetBrains Mono', 'monospace'],
+            },
+            colors: {
+              slate: {
+                950: '#030712',
+              }
+            }
+          }
+        }
+      }
+    </script>
 
-.popup-content {
-    background: #020617;
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-    width: 300px;
-    position: relative;
-}
+    <!-- Lucide Icons Library CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
 
-.close-btn {
-    position: absolute;
-    top: 10px;
-    right: 15px;
-    cursor: pointer;
-    color: red;
-    font-size: 20px;
-}
-</style>            
-</head>            
-            
-<body>            
-            
-<header>            
-    <h1>TIAI</h1>            
-    <nav>            
-        <a href="#">Home</a>            
-        <a href="#more">More</a>            
-        <a href="#contact">Contact</a>            
-    </nav>            
-</header>            
-            
-<!-- HERO -->            
-<div class="hero">            
-    <img src="-1.png" alt="TIAI AI Company Logo Technology of Indian Artificial Intelligence">            
-    <h2>Technology of Indian Artificial Intelligence</h2>            
-    <p>            
-        Building the future with AI, automation, and intelligent systems.            
-    </p>            
-    <button class="btn" onclick="scrollToMore()">Explore Now</button>            
-</div>            
-            
-<!-- What is TIAI? -->            
-<div class="section">            
-    <h2>What is TIAI?</h2>            
-    <p>            
-        TIAI (Technology of Indian Artificial Intelligence) is an AI company founded by Soham Jadhav in 2026,             
-        originally started as a project.            
-    </p>            
-    <p>            
-       <p>            
-TIAI (Technology of Indian Artificial Intelligence) is an emerging AI company founded by Soham Jadhav in 2026, originally started as a project and now developing as a technology company focused on AI tools, automation, and intelligent systems.            
-</p>             
-    </p>            
-            
-<!-- ABOUT -->            
-<div class="section">            
-    <h2>About TIAI</h2>            
-    <p>            
-        TIAI is an AI company founded by Soham Jadhav in 2026.            
-        We aim to build intelligent tools, automation systems, and next-gen AI technology.            
-    </p>            
-</div>            
-<div class="section">            
-    <h2>Company Status</h2>            
-    <p>            
-        TIAI is an independent AI company actively working on developing intelligent technologies and systems.            
-    </p>            
-</div>            
-<!-- SERVICES -->            
-<div class="section">            
-    <h2>Our Services</h2>            
-            
-    <div class="cards">            
-        <div class="card">            
-            <h3>AI Development</h3>            
-            <p>Smart AI tools & machine learning systems.</p>            
-        </div>            
-            
-        <div class="card">            
-            <h3>Web Development</h3>            
-            <p>Modern responsive websites & apps.</p>            
-        </div>            
-            
-        <div class="card">            
-            <h3>Automation</h3>            
-            <p>Automate tasks using AI technology.</p>            
-        </div>            
-            
-        <div class="card">            
-            <h3>Chatbots</h3>            
-            <p>AI-powered conversational systems.</p>            
-        </div>            
-    </div>            
-</div>            
-            
-<!-- MORE INFO -->            
-<div id="more" class="section">            
-    <h2>More Information</h2>            
-    <p>            
-        TIAI focuses on innovation in Artificial Intelligence, aiming to revolutionize technology in India.            
-    </p>            
-    <p>            
-        Our mission is to create accessible AI tools for students, developers, and businesses.            
-    </p>            
-    <p>            
-        TIAI is not just a company — it is a vision for the future.            
-    </p>            
-</div>            
-            
-<!-- FOUNDER -->            
-<div class="section">            
-    <h2>Founder</h2>            
-    <p>Soham Jadhav - Founder & CEO of TIAI ( AI-Company 2026)</p>            
-</div>            
-            
-<!-- CONTACT -->            
-<div id="contact" class="section">            
-    <h2>Contact</h2>            
-    <p>Email: jadhavranjana148@gmail.com</p>            
+    <style type="text/css">
+      /* Glassmorphism Classes */
+      .glass-panel {
+        background: rgba(15, 23, 42, 0.7);
+        backdrop-filter: blur(16px);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+      }
+      .glass-card {
+        background: rgba(30, 41, 59, 0.4);
+        backdrop-filter: blur(8px);
+        border: 1px solid rgba(255, 255, 255, 0.05);
+      }
+      .glow-cyan {
+        box-shadow: 0 0 35px rgba(6, 182, 212, 0.15);
+      }
+      .glow-blue {
+        box-shadow: 0 0 40px rgba(99, 102, 241, 0.12);
+      }
+      .glow-text {
+        text-shadow: 0 0 10px rgba(6, 182, 212, 0.4);
+      }
+      /* Custom selection style */
+      ::selection {
+        background-color: #06b6d4;
+        color: #030712;
+      }
+    </style>
+  </head>
+  <body class="bg-slate-950 text-slate-100 font-sans selection:bg-cyan-500 selection:text-slate-950 relative min-h-screen overflow-x-hidden">
 
-<button class="btn" onclick="openPopup()">Info of Owner</button>
+    <!-- Absolute background aesthetic elements -->
+    <div class="absolute inset-0 pointer-events-none z-0 opacity-30">
+      <div class="absolute -top-[10%] -left-[10%] w-[60%] h-[60%] rounded-full bg-cyan-950/40 blur-[130px] glow-cyan"></div>
+      <div class="absolute top-[35%] -right-[15%] w-[50%] h-[50%] rounded-full bg-indigo-950/30 blur-[140px] glow-blue"></div>
+      <div class="absolute -bottom-[10%] left-[20%] w-[55%] h-[55%] rounded-full bg-emerald-950/25 blur-[120px]"></div>
+      
+      <!-- Technological grid mesh background overlay -->
+      <div class="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.015)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.015)_1px,transparent_1px)] bg-[size:3.5rem_3.5rem]"></div>
+    </div>
 
-</div>            
+    <!-- Active Navigation Bar -->
+    <header class="sticky top-0 z-[100] w-full glass-panel border-b border-white/5 backdrop-blur-md">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+        
+        <!-- Brand identity -->
+        <a href="#home" class="flex items-center gap-3.5 group">
+          <div class="relative w-11 h-11 rounded-xl overflow-hidden border border-cyan-500/35 p-1 bg-slate-900 shadow-lg shadow-cyan-950/20 group-hover:border-cyan-400 transition-all duration-300">
+            <img 
+              src="https://raw.githubusercontent.com/jadhavranjana148-coder/TIAI/main/-1.png" 
+              alt="TIAI Holographic Brand Emblem" 
+              referrerpolicy="no-referrer"
+              class="w-full h-full object-contain transform group-hover:scale-105 transition-transform duration-300"
+            />
+          </div>
+          <div class="flex flex-col">
+            <span class="font-display font-bold text-2xl tracking-widest text-white leading-none">
+              TIAI
+            </span>
+            <span class="text-[9px] font-mono tracking-widest text-cyan-400 font-semibold uppercase mt-0.5">
+              Technology of Indian AI
+            </span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Matrix -->
+        <nav class="hidden md:flex items-center gap-2 text-sm font-medium">
+          <a href="#home" class="px-4 py-2 text-slate-300 hover:text-cyan-400 hover:bg-white/5 rounded-lg transition-all">Home</a>
+          <a href="#about" class="px-4 py-2 text-slate-300 hover:text-cyan-400 hover:bg-white/5 rounded-lg transition-all">About</a>
+          <a href="#services" class="px-4 py-2 text-slate-300 hover:text-cyan-400 hover:bg-white/5 rounded-lg transition-all">Services</a>
+          <a href="#more-info" class="px-4 py-2 text-slate-300 hover:text-cyan-400 hover:bg-white/5 rounded-lg transition-all">More Info</a>
+          <a href="#founder" class="px-4 py-2 text-slate-300 hover:text-cyan-400 hover:bg-white/5 rounded-lg transition-all">Founder</a>
+          <a href="#contact" class="px-4.5 py-2.5 bg-gradient-to-r from-cyan-600 to-indigo-600 hover:from-cyan-500 hover:to-indigo-500 text-white rounded-lg text-xs tracking-wider uppercase font-semibold shadow-lg shadow-cyan-950/50 transition-all ml-4">
+            Contact Us
+          </a>
+        </nav>
+
+        <!-- Dynamic Mobile Action Button -->
+        <div class="md:hidden flex items-center">
+          <a href="#contact" class="px-3 py-1.5 bg-cyan-600 text-slate-950 text-xs rounded font-bold uppercase tracking-wider">
+            Contact
+          </a>
+        </div>
+
+      </div>
+    </header>
+
+    <!-- Main Content Container Grid -->
+    <main class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <!-- Hero Section -->
+      <section id="home" class="pt-16 pb-24 md:pt-24 md:pb-36 flex flex-col items-center">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center w-full">
+          
+          <!-- Title, subtitle, stats and brief presentation -->
+          <div class="lg:col-span-7 flex flex-col space-y-6 text-left">
             
-    <a href="https://medium.com/@jadhavranjana148">Medium</a>                      
-             
-    <a href="https://www.linkedin.com/in/ranjana-jadhav-82ab88401">LinkedIn</a>            
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-cyan-500/20 bg-cyan-950/35 text-cyan-400 text-xs font-mono w-fit uppercase tracking-wider">
+              <i data-lucide="sparkles" class="w-3.5 h-3.5 animate-pulse"></i>
+              Technology of Indian Artificial Intelligence
+            </div>
+
+            <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight text-white">
+              Building the future <br class="hidden sm:inline" />with <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-sky-305 to-indigo-400 glow-text">AI &amp; Automation</span>
+            </h1>
+
+            <div class="space-y-4">
+              <p class="text-slate-300 text-base sm:text-lg leading-relaxed max-w-2xl font-light">
+                <strong class="text-cyan-400 font-semibold font-display">TIAI</strong> is an emerging AI enterprise founded by <a href="#founder" class="underline hover:text-cyan-400 text-cyan-300 transition-colors">Soham Jadhav</a> in 2026. Initially launched as an ambitious computational research project, it is now rapidly advancing into an independent technology developer dedicated to AI tools, task optimization setups, and highly customized intelligent systems.
+              </p>
+              
+              <div class="p-4 border-l-2 border-indigo-500 bg-indigo-950/20 rounded-r-xl max-w-xl">
+                <p class="text-slate-400 text-xs sm:text-sm italic leading-relaxed font-light">
+                  "TIAI (Technology of Indian Artificial Intelligence) is an AI company founded by Soham Jadhav in 2026, originally started as a project and now developing as a technology company focused on AI tools, automation, and intelligent systems."
+                </p>
+              </div>
+            </div>
+
+            <!-- Trust Flags & Details -->
+            <div class="flex flex-wrap gap-x-6 gap-y-3 pt-2">
+              <div class="flex items-center gap-2">
+                <i data-lucide="check-circle-2" class="w-5 h-5 text-emerald-500"></i>
+                <span class="text-sm font-medium text-slate-200">Active Technology Ecosystem</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <i data-lucide="shield-check" class="w-5 h-5 text-cyan-404"></i>
+                <span class="text-sm font-medium text-slate-200">Independent AI Startup</span>
+              </div>
+            </div>
+
+            <div class="flex flex-wrap gap-4 pt-4">
+              <a href="#services" class="px-6 py-3.5 rounded-lg bg-cyan-500 text-slate-950 font-bold hover:bg-cyan-404 transition-all shadow-md hover:shadow-cyan-500/10 text-sm flex items-center gap-2">
+                Launch Sandbox Demos
+                <i data-lucide="arrow-right" class="w-4 h-4"></i>
+              </a>
+              <a href="#founder" class="px-6 py-3.5 rounded-lg border border-slate-700 bg-slate-900/60 text-slate-300 hover:text-white hover:border-slate-505 transition-all text-sm">
+                Meet Founder Soham
+              </a>
+            </div>
+
+          </div>
+
+          <!-- Hero Right: Dynamic Glowing Radar containing the TIAI emblem -->
+          <div class="lg:col-span-5 flex justify-center lg:justify-end">
+            <div class="relative w-80 h-80 sm:w-96 sm:h-96 group">
+              
+              <!-- Orbital tech decoration components -->
+              <div class="absolute inset-0 rounded-full border border-dashed border-cyan-500/20 animate-[spin_60s_linear_infinite]"></div>
+              <div class="absolute inset-4 rounded-full border border-cyan-500/10 animate-[spin_30s_linear_infinite_reverse]"></div>
+              
+              <!-- Outer Glow gradient -->
+              <div class="absolute -inset-1 rounded-full bg-gradient-to-r from-cyan-500 to-indigo-500 opacity-20 blur-xl group-hover:opacity-35 transition-opacity duration-700 animate-pulse"></div>
+              
+              <div class="absolute -top-3 -left-3 px-3 py-1 font-mono text-[10px] text-cyan-404 rounded-md border border-cyan-500/30 bg-slate-950/95 uppercase">
+                NODE_NODE: EXECUTED
+              </div>
+              
+              <!-- Central logo -->
+              <div class="relative w-full h-full rounded-full overflow-hidden border-2 border-cyan-500/40 p-5 bg-slate-900 shadow-2xl flex items-center justify-center">
+                <img 
+                  src="https://raw.githubusercontent.com/jadhavranjana148-coder/TIAI/main/-1.png" 
+                  alt="TIAI Holographic Logo Image" 
+                  referrerPolicy="no-referrer"
+                  class="w-full h-full object-contain pointer-events-none drop-shadow-[0_0_20px_rgba(6,182,212,0.8)]"
+                />
+              </div>
+
+              <div class="absolute -bottom-2 -right-2 px-3 py-1.5 font-mono text-[11px] text-emerald-400 rounded-md border border-emerald-500/30 bg-slate-950/95 flex items-center gap-1.5">
+                <span class="w-2 h-2 rounded-full bg-emerald-500 animate-ping"></span>
+                <span>STATUS: OPERATIONAL</span>
+              </div>
+              
+            </div>
+          </div>
+          
+        </div>
+      </section>
+
+      <!-- About TIAI, Mission, & Status Summary -->
+      <section id="about" class="py-20 bg-slate-950/80 border-y border-white/5 relative">
+        <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-cyan-500/35 to-transparent"></div>
+        
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <h2 class="font-display text-3xl sm:text-4xl font-extrabold text-white mb-4">
+            About TIAI
+          </h2>
+          <div class="h-1 w-20 bg-cyan-500 mx-auto rounded-full mb-6"></div>
+          <p class="text-slate-300 text-lg leading-relaxed font-light">
+            We merge intelligent workflows, task engines, and conversational systems to empower tomorrow&amp;apos;s Indian computing matrix.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          
+          <!-- Identity matrix -->
+          <div class="glass-panel rounded-2xl p-7 hover:border-cyan-500/30 hover:shadow-lg transition-all group duration-300">
+            <div class="w-12 h-12 rounded-xl bg-cyan-950/50 border border-cyan-500/20 flex items-center justify-center text-cyan-404 mb-6 group-hover:border-cyan-404 group-hover:bg-cyan-950 transition-colors">
+              <i data-lucide="info" class="w-6 h-6"></i>
+            </div>
+            <h3 class="font-display font-bold text-xl text-white mb-3">Our Identity</h3>
+            <p class="text-slate-300 text-sm leading-relaxed mb-4 font-light">
+              TIAI (Technology of Indian Artificial Intelligence) was founded as a visionary project by Soham Jadhav in 2026. What blossomed out of independent developer efforts has now expanded into high-tech automation research.
+            </p>
+            <div class="text-xs font-mono text-cyan-404 uppercase tracking-wide">
+              Established &bull; 2026
+            </div>
+          </div>
+
+          <!-- Company Status Matrix -->
+          <div class="glass-panel rounded-2xl p-7 hover:border-indigo-505/30 hover:shadow-lg transition-all group duration-300">
+            <div class="w-12 h-12 rounded-xl bg-indigo-950/50 border border-indigo-505/20 flex items-center justify-center text-indigo-404 mb-6 group-hover:border-indigo-404 group-hover:bg-indigo-950 transition-colors">
+              <i data-lucide="building" class="w-6 h-6"></i>
+            </div>
+            <h3 class="font-display font-bold text-xl text-white mb-3">Company Status</h3>
+            <p class="text-slate-300 text-sm leading-relaxed mb-4 font-light">
+              TIAI is an independent AI company actively working on developing intelligent technologies and systems. We maintain extreme agility to deploy rapid proof-of-concepts, API endpoints, and smart business modules.
+            </p>
+            <div class="text-xs font-mono text-indigo-404 uppercase tracking-wide">
+              Active Research Lab
+            </div>
+          </div>
+
+          <!-- Aim & Purpose Matrix -->
+          <div class="glass-panel rounded-2xl p-7 hover:border-emerald-500/30 hover:shadow-lg transition-all group duration-300">
+            <div class="w-12 h-12 rounded-xl bg-emerald-950/50 border border-emerald-500/20 flex items-center justify-center text-emerald-400 mb-6 group-hover:border-emerald-400 group-hover:bg-emerald-950 transition-colors">
+              <i data-lucide="target" class="w-6 h-6"></i>
+            </div>
+            <h3 class="font-display font-bold text-xl text-white mb-3">Objective &amp; Aim</h3>
+            <p class="text-slate-300 text-sm leading-relaxed mb-4 font-light">
+              We aim to build intelligent tools, automation systems, and next-gen AI technology. We seek to cultivate specialized digital algorithms to equip tomorrow's India with advanced software capabilities.
+            </p>
+            <div class="text-xs font-mono text-emerald-404 uppercase tracking-wide">
+              Next-Gen Focus State
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Vision and quote alignment block -->
+        <div class="mt-12 glass-card rounded-2xl p-6.5 border border-cyan-500/10 flex flex-col md:flex-row items-center justify-between gap-6 bg-[radial-gradient(ellipse_at_top,rgba(6,182,212,0.05),transparent)]">
+          <div class="flex items-center gap-4 text-left">
+            <div class="w-10 h-10 rounded-full bg-cyan-950/80 border border-cyan-404/30 flex items-center justify-center text-cyan-404 shrink-0">
+              <i data-lucide="cpu" class="w-5 h-5 text-cyan-404 animate-spin"></i>
+            </div>
+            <div>
+              <h4 class="font-display font-bold text-white text-base">Indian Technological Vanguard</h4>
+              <p class="text-slate-400 text-xs font-light">A unified project turned vision to empower Indian developers and enterprises.</p>
+            </div>
+          </div>
+          <p class="text-slate-300 text-sm md:text-right max-w-md italic font-light font-mono leading-relaxed">
+            &ldquo;TIAI is not just a company &mdash; it is a vision for the future.&rdquo;
+          </p>
+        </div>
+      </section>
+      <!-- Services List Section & Interactive Sandbox Console -->
+      <section id="services" class="py-20 relative">
+        
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full border border-cyan-500/20 bg-cyan-950/40 text-cyan-404 text-xs font-mono uppercase mb-4 tracking-wider">
+            <i data-lucide="layers" class="w-3.5 h-3.5"></i>
+            Our Services
+          </div>
+          <h2 class="font-display text-4xl font-extrabold text-white mb-4">
+            Our Core Specialties
+          </h2>
+          <div class="h-1 w-20 bg-indigo-500 mx-auto rounded-full mb-6"></div>
+          <p class="text-slate-300 text-base font-light font-sans">
+            Select an offering from our system map below to initialize its dynamic live simulation sandbox! Test automated responses, predict GDP figures, or custom render styles instantly.
+          </p>
+        </div>
+
+        <!-- Services Cards mapped to run custom interactive simulation templates in sandbox -->
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-12">
+          
+          <!-- Speciality 1: AI Development -->
+          <button 
+            onclick="switchSandbox('ai')"
+            id="btn-service-ai"
+            class="glass-panel text-left p-6.5 rounded-2xl border-cyan-500 bg-cyan-950/25 ring-1 ring-cyan-500/40 outline-none transition-all cursor-pointer relative overflow-hidden group duration-300"
+          >
+            <div class="w-11 h-11 rounded-lg bg-cyan-500 text-slate-950 flex items-center justify-center mb-5 transition-all outline-none" id="ico-service-ai">
+              <i data-lucide="cpu" class="w-5.5 h-5.5"></i>
+            </div>
+            <h3 class="font-display font-medium text-lg text-white mb-2 block">AI Development</h3>
+            <p class="text-slate-300 text-xs leading-relaxed font-light mb-4">
+              Smart AI tools &amp; machine learning systems. Custom model training, prediction, and big data analysis.
+            </p>
+            <span class="text-[10px] font-mono uppercase tracking-wider text-cyan-404 block" id="lbl-service-ai">
+              &bull; Running Sandbox Demo
+            </span>
+          </button>
+
+          <!-- Speciality 2: Web Development -->
+          <button 
+            onclick="switchSandbox('web')"
+            id="btn-service-web"
+            class="glass-panel text-left p-6.5 rounded-2xl border-slate-850 hover:border-slate-705 outline-none transition-all cursor-pointer relative overflow-hidden group duration-300"
+          >
+            <div class="w-11 h-11 rounded-lg bg-cyan-950/60 text-cyan-404 flex items-center justify-center mb-5 transition-all outline-none" id="ico-service-web">
+              <i data-lucide="globe" class="w-5.5 h-5.5"></i>
+            </div>
+            <h3 class="font-display font-medium text-lg text-white mb-2 block">Web Development</h3>
+            <p class="text-slate-300 text-xs leading-relaxed font-light mb-4">
+              Modern responsive websites &amp; apps. Beautiful client side styles, high-adaptation containers, and sleek interfaces.
+            </p>
+            <span class="text-[10px] font-mono uppercase tracking-wider text-slate-505 block" id="lbl-service-web">
+              Click to Run Demo
+            </span>
+          </button>
+
+          <!-- Speciality 3: Automation -->
+          <button 
+            onclick="switchSandbox('automation')"
+            id="btn-service-automation"
+            class="glass-panel text-left p-6.5 rounded-2xl border-slate-850 hover:border-slate-705 outline-none transition-all cursor-pointer relative overflow-hidden group duration-300"
+          >
+            <div class="w-11 h-11 rounded-lg bg-cyan-950/60 text-cyan-404 flex items-center justify-center mb-5 transition-all outline-none" id="ico-service-automation">
+              <i data-lucide="zap" class="w-5.5 h-5.5"></i>
+            </div>
+            <h3 class="font-display font-medium text-lg text-white mb-2 block">Automation</h3>
+            <p class="text-slate-300 text-xs leading-relaxed font-light mb-4">
+              Automate tasks using AI technology. Seamless API hooks, auto scheduler setups, and routine task elimination flowscripts.
+            </p>
+            <span class="text-[10px] font-mono uppercase tracking-wider text-slate-505 block" id="lbl-service-automation">
+              Click to Run Demo
+            </span>
+          </button>
+
+          <!-- Speciality 4: Chatbots -->
+          <button 
+            onclick="switchSandbox('chatbot')"
+            id="btn-service-chatbot"
+            class="glass-panel text-left p-6.5 rounded-2xl border-slate-850 hover:border-slate-705 outline-none transition-all cursor-pointer relative overflow-hidden group duration-300"
+          >
+            <div class="w-11 h-11 rounded-lg bg-cyan-950/60 text-cyan-404 flex items-center justify-center mb-5 transition-all outline-none" id="ico-service-chatbot">
+              <i data-lucide="message-square" class="w-5.5 h-5.5"></i>
+            </div>
+            <h3 class="font-display font-medium text-lg text-white mb-2 block">Chatbots</h3>
+            <p class="text-slate-300 text-xs leading-relaxed font-light mb-4">
+              AI-powered conversational systems. Highly Context-aware support systems, automated ticketing engines, and smart chat boxes.
+            </p>
+            <span class="text-[10px] font-mono uppercase tracking-wider text-slate-505 block" id="lbl-service-chatbot">
+              Click to Run Demo
+            </span>
+          </button>
+
+        </div>
+
+        <!-- Sandbox System Simulator Console Layout -->
+        <div class="glass-panel rounded-2xl border border-white/5 overflow-hidden glow-cyan mt-6">
+          
+          <!-- Console top bar -->
+          <div class="bg-slate-900/95 border-b border-white/5 py-4 px-6 flex flex-wrap items-center justify-between gap-4">
+            <div class="flex items-center gap-2.5">
+              <span class="w-3.5 h-3.5 rounded-full bg-rose-500"></span>
+              <span class="w-3.5 h-3.5 rounded-full bg-amber-500"></span>
+              <span class="w-3.5 h-3.5 rounded-full bg-emerald-505"></span>
+              <span class="text-slate-404 font-mono text-[11px] ml-2 tracking-wide uppercase font-semibold">
+                SYSTEM CORE &mdash; ACTIVE SIMULATOR CONSOLE [<span id="lbl-cur-mode-name">AI CHANNELS</span>]
+              </span>
+            </div>
+            <div class="px-2.5 py-1 text-[11px] font-mono text-cyan-404 rounded bg-cyan-950/60 border border-cyan-505/20">
+              TIAI_NODE v1.02 SECURE
+            </div>
+          </div>
+
+          <!-- Console Dynamic Areas -->
+          <div class="p-6 sm:p-8 bg-slate-950/40 relative min-h-[320px]">
+            
+            <!-- Sandbox 1: AI prediction -->
+            <div id="sandbox-ai" class="grid grid-cols-1 lg:grid-cols-2 gap-8 active-sandbox-class">
+              <div class="flex flex-col space-y-4">
+                <h4 class="font-display font-extrabold text-white text-xl flex items-center gap-2">
+                  <i data-lucide="cpu" class="w-5.5 h-5.5 text-cyan-450 shrink-0"></i>
+                  Smart AI Modeling Simulator
+                </h4>
+                <p class="text-slate-305 text-sm font-light leading-relaxed">
+                  Test-train deep statistical prediction matrices on specific Indian dataset arrays. Specify a target optimization parameter or economic scope below, then query the TIAI node network to model optimized outputs.
+                </p>
                 
-    <a href="https://www.quora.com/profile/Ranjana-Jadhav-94">Quara</a>            
+                <div class="space-y-3">
+                  <label class="text-[11px] font-mono text-cyan-404 font-bold uppercase tracking-wider block">Target Statistical Scope Array:</label>
+                  <input 
+                    type="text" 
+                    id="txt-ai-scope" 
+                    value="India Economic Growth Projection 2026-2030" 
+                    class="w-full px-4 py-3 bg-slate-900 border border-slate-800 rounded-lg text-slate-101 text-sm focus:border-cyan-500 focus:outline-none transition-all font-mono"
+                  />
+                </div>
+
+                <div class="pt-2">
+                  <button 
+                    onclick="runAiAnalytics()" 
+                    id="btn-ai-computational"
+                    class="px-5 py-3 rounded-lg bg-cyan-500 text-slate-950 font-bold hover:bg-cyan-404 text-xs uppercase tracking-wider transition-all shadow-md active:scale-[0.98] inline-flex items-center gap-2"
+                  >
+                    Calculate Adaptive Growth Model
+                  </button>
+                </div>
+              </div>
+
+              <div class="bg-slate-900/50 border border-slate-800 rounded-xl p-5 flex flex-col justify-between font-mono text-sm min-h-[220px]">
+                <div>
+                  <span class="text-emerald-400 font-bold block mb-1">&gt;_ TIAI Predictive Array Active.</span>
+                  <p class="text-slate-500 text-xs">Epoch: 512 | Loss Rate: 0.0034 | Model: TIAI-Regression-v3</p>
+                </div>
+
+                <div id="box-ai-output" class="py-4 my-2 text-slate-404 text-xs border-y border-white/5 font-mono leading-relaxed">
+                  <span class="text-slate-505 italic block">Output feedback will populate here after triggering computation above...</span>
+                </div>
+
+                <div class="text-[10px] text-slate-600 flex justify-between items-center border-t border-slate-850 pt-3 mt-2">
+                  <span>SSL ENCRYPTED CHANNEL</span>
+                  <span>NODE: ACTIVE</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Sandbox 2: Web Dev adaptive customizer -->
+            <div id="sandbox-web" class="grid grid-cols-1 lg:grid-cols-2 gap-8 hidden">
+              <div class="flex flex-col space-y-4">
+                <h4 class="font-display font-extrabold text-white text-xl flex items-center gap-2">
+                  <i data-lucide="globe" class="w-5.5 h-5.5 text-cyan-404 shrink-0"></i>
+                  Theme Adaptive Architecture Customizer
+                </h4>
+                <p class="text-slate-300 text-sm font-light leading-relaxed">
+                  Test the responsive adaptation vectors of TIAI layouts. Tweak colors, alignments, or components below, and watch the live compiled mock screen preview adapt in real-time.
+                </p>
+
+                <div class="space-y-4 pt-2">
+                  <div>
+                    <span class="text-xs font-mono text-cyan-404 font-bold block mb-2 uppercase">CHOOSE COMPACT PREVIEW STYLE:</span>
+                    <div class="grid grid-cols-3 gap-2">
+                      <button onclick="setWebThemeStyle('space')" id="btn-web-space" class="px-3 py-2 text-[11px] rounded border transition-all font-mono bg-cyan-500/10 border-cyan-500 text-cyan-300 font-bold cursor-pointer">SPACE CYBER</button>
+                      <button onclick="setWebThemeStyle('indus')" id="btn-web-indus" class="px-3 py-2 text-[11px] rounded border transition-all font-mono bg-slate-900 border-slate-800 text-slate-405 cursor-pointer">ROYAL PURPLE</button>
+                      <button onclick="setWebThemeStyle('zen')" id="btn-web-zen" class="px-3 py-2 text-[11px] rounded border transition-all font-mono bg-slate-900 border-slate-800 text-slate-405 cursor-pointer">EMERALD ZEN</button>
+                    </div>
+                  </div>
+
+                  <div>
+                    <span class="text-xs font-mono text-cyan-404 font-bold block mb-2 uppercase">SET ACTION BUTTON ACCENT:</span>
+                    <div class="grid grid-cols-3 gap-2">
+                      <button onclick="setWebAccentStyle('cyan')" id="btn-acc-cyan" class="px-3 py-1.5 text-[10px] rounded border transition-all font-mono bg-cyan-950 text-cyan-404 border-cyan-505/50 cursor-pointer">CYAN BEAM</button>
+                      <button onclick="setWebAccentStyle('indigo')" id="btn-acc-indigo" class="px-1.5 py-1.5 text-[10px] rounded border transition-all font-mono bg-slate-900 border-slate-800 text-slate-405 cursor-pointer">INDIGO FORCE</button>
+                      <button onclick="setWebAccentStyle('emerald')" id="btn-acc-emerald" class="px-1.5 py-1.5 text-[10px] rounded border transition-all font-mono bg-slate-900 border-slate-800 text-slate-405 cursor-pointer">EMERALD GLOW</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Mock Mini Website Preview -->
+              <div class="bg-slate-900/60 border border-slate-800 rounded-xl p-5 flex flex-col justify-between font-sans relative overflow-hidden min-h-[250px]">
+                <div class="absolute top-2 right-2 px-1.5 py-0.5 text-[8px] font-mono rounded bg-white/5 text-slate-500">
+                  REAL-TIME PREVIEW
+                </div>
+                
+                <div class="space-y-4">
+                  <!-- Mimic Header -->
+                  <div class="flex justify-between items-center bg-slate-950/70 border border-white/5 py-1.5 px-3 rounded text-[9px] font-mono">
+                    <span id="txt-preview-brand" class="font-bold text-cyan-404">TIAI SYSTEMS</span>
+                    <div class="flex gap-2 text-[8px] text-slate-405">
+                      <span>Home</span>
+                      <span>Features</span>
+                    </div>
+                  </div>
+
+                  <!-- Mimic body card -->
+                  <div id="panel-web-preview" class="p-4 rounded-lg bg-slate-950/40 border border-cyan-500/10 text-left transition-colors duration-300">
+                    <h5 class="text-xs font-bold font-display text-white uppercase mb-1 tracking-wider leading-none">Computational Freedom</h5>
+                    <p class="text-[10px] text-slate-400 font-light mb-3">Empowering developers with smart, resilient, localized architectures built for world demands.</p>
+                    
+                    <button id="btn-preview-accent" class="px-3 py-1.5 rounded text-[8px] font-bold bg-cyan-400 text-slate-950 uppercase shadow">
+                      Secure Node
+                    </button>
+                  </div>
+                </div>
+
+                <div class="mt-4 pt-3 border-t border-slate-850 text-[10px] font-mono text-slate-500 flex justify-between items-center">
+                  <span>STYLE: <strong id="val-preview-style">SPACE CYBER</strong></span>
+                  <span>ACCENT: <strong id="val-preview-accent">CYAN BEAM</strong></span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Sandbox 3: Task Automation Sandbox -->
+            <div id="sandbox-automation" class="grid grid-cols-1 lg:grid-cols-2 gap-8 hidden">
+              <div class="flex flex-col space-y-4">
+                <h4 class="font-display font-extrabold text-white text-xl flex items-center gap-2">
+                  <i data-lucide="zap" class="w-5.5 h-5.5 text-cyan-455 shrink-0"></i>
+                  Task Automation Pipeline Orchestrator
+                </h4>
+                <p class="text-slate-300 text-sm font-light leading-relaxed">
+                  Trigger automated routines to generate analytics digests, sync datasets, or push logs. Tap below to fire up the automated pipeline, tracking the dynamic stage progression across our localized cloud structure.
+                </p>
+
+                <div class="pt-2">
+                  <button 
+                    onclick="triggerAutomationPipe()" 
+                    id="btn-trigger-pipe"
+                    class="px-5 py-3 rounded-lg bg-cyan-505 text-slate-950 font-bold hover:bg-cyan-404 text-xs uppercase tracking-wider transition-all shadow-md active:scale-95 cursor-pointer"
+                  >
+                    Initialize Automated Pipeline
+                  </button>
+                </div>
+              </div>
+
+              <div class="bg-slate-900/50 border border-slate-800 rounded-xl p-5 flex flex-col justify-between font-mono text-xs">
+                <div class="space-y-3">
+                  <div class="flex justify-between items-center">
+                    <span class="font-bold">ORCHESTRATION PIPELINE:</span>
+                    <span id="lbl-pipe-status" class="px-2 py-0.5 text-[9px] uppercase font-bold text-slate-500 bg-slate-800 rounded">IDLE</span>
+                  </div>
+
+                  <!-- Progress bars -->
+                  <div class="w-full bg-slate-950 rounded-full h-2.5 overflow-hidden border border-slate-800">
+                    <div id="bar-pipe-progress" class="bg-gradient-to-r from-cyan-500 to-indigo-500 h-full w-0 transition-all duration-300"></div>
+                  </div>
+                  <div class="flex justify-between text-[10px] text-slate-550 header-color">
+                    <span>TRANSFER COMPLETE: <strong id="txt-pipe-percent">0%</strong></span>
+                    <span>POLL LIMIT: 0.05ms</span>
+                  </div>
+                </div>
+
+                <div id="console-pipe-output" class="bg-slate-950 p-3 rounded-lg border border-slate-900 font-mono text-[9px] text-slate-404 leading-relaxed h-[130px] overflow-y-auto space-y-1 block mt-3">
+                  <div>&gt;_ System scheduler listener is online. Ready for callback hooks...</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Sandbox 4: Chatbot Conversational Assistant mock -->
+            <div id="sandbox-chatbot" class="flex flex-col space-y-4 hidden">
+              <div class="flex flex-col lg:flex-row gap-6">
+                
+                <div class="lg:w-1/3 flex flex-col space-y-3 justify-between">
+                  <div>
+                    <h4 class="font-display font-extrabold text-white text-xl flex items-center gap-2">
+                      <i data-lucide="message-square" class="w-5.5 h-5.5 text-cyan-404 shrink-0"></i>
+                      AI Conversational Chatbot
+                    </h4>
+                    <p class="text-slate-300 text-xs font-light leading-relaxed mt-2">
+                      Deploy instant automated chat boxes to answer user queries with zero latency. Test our custom neural conversational responder right here!
+                    </p>
+                  </div>
+                  
+                  <div class="pt-2">
+                    <span class="text-[10px] font-mono text-cyan-404 block mb-1.5 uppercase font-bold tracking-wider">Tap Quick Questions:</span>
+                    <div class="flex flex-col gap-1.5">
+                      <button onclick="pressChatQuery('Who is Soham Jadhav?')" class="px-3 py-1.5 text-[9.5px] bg-slate-900 border border-slate-855 hover:border-slate-700 text-slate-305 rounded font-mono text-left cursor-pointer">Who is the Founder?</button>
+                      <button onclick="pressChatQuery('What services do you provide?')" class="px-3 py-1.5 text-[9.5px] bg-slate-900 border border-slate-855 hover:border-slate-700 text-slate-305 rounded font-mono text-left cursor-pointer">Show Service Details</button>
+                      <button onclick="pressChatQuery('Explain TIAI\'s Mission Statement')" class="px-3 py-1.5 text-[9.5px] bg-slate-900 border border-slate-855 hover:border-slate-700 text-slate-305 rounded font-mono text-left cursor-pointer">What is TIAI&apos;s mission?</button>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="lg:w-2/3 glass-panel rounded-2xl border border-white/5 flex flex-col h-[280px] overflow-hidden">
+                  
+                  <!-- Chat box area -->
+                  <div id="chat-messages-container" class="flex-1 overflow-y-auto p-4 space-y-3 flex flex-col scroll-smooth">
+                    
+                    <div class="max-w-[85%] rounded-xl px-3.5 py-2 px-3 text-xs bg-slate-900 border border-slate-800 text-slate-205 self-start rounded-bl-none">
+                      <span class="font-bold text-[9px] uppercase tracking-wider text-cyan-404 block mb-1">TIAI AGENT:</span>
+                      Namaste! I am the TIAI Assistant Node. How can I help you understand Indian AI, automation, or Soham Jadhav&apos;s tech ventures?
+                    </div>
+
+                  </div>
+
+                  <!-- Chat send form -->
+                  <form onsubmit="sendChatMsg(event)" class="bg-slate-950 p-2 border-t border-slate-850 flex gap-2">
+                    <input 
+                      type="text" 
+                      id="txt-chat-query" 
+                      placeholder="Type your question about TIAI..." 
+                      class="flex-1 px-3 py-2 text-xs bg-slate-900 border border-slate-800 rounded-lg text-slate-101 focus:outline-none focus:border-cyan-500 font-mono"
+                    />
+                    <button type="submit" class="px-3 py-2 rounded-lg bg-cyan-500 hover:bg-cyan-404 text-slate-950 flex items-center justify-center cursor-pointer">
+                      <i data-lucide="send" class="w-4 h-4"></i>
+                    </button>
+                  </form>
+
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </section>
+
+      <!-- More Information Section -->
+      <section id="more-info" class="py-20 bg-slate-950/40 relative">
+        <a name="more"></a>
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          
+          <div class="lg:col-span-6 space-y-6 text-left">
+            <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full border border-indigo-505/20 bg-indigo-950/35 text-indigo-404 text-xs font-mono uppercase tracking-wider">
+              <i data-lucide="info" class="w-3.5 h-3.5"></i>
+              More Information
+            </div>
             
-<!-- POPUP -->
-<div class="popup" id="popup">
-  <div class="popup-content">
-    <span class="close-btn" onclick="closePopup()">✖</span>
-
-    <img src="CEO.png" style="width:120px;border-radius:50%;margin-bottom:10px;">
-
-    <h3>Soham Jadhav</h3>
-    <p>Birth Date: 28/02/2011</p>
-    <p>Age:15 (2026)</p>
-    <p>India/mharastra/Solapur/Karmala/Sawadi</p>
-    <p>Founder & CEO of TIAI</p>
-    <h4>Mission: To build intelligent AI systems for the future of India.</h4>
-
-  </div>
-</div>
-<footer>            
-    © 2026 TIAI (Technology of Indian Artificial Intelligence) - AI Company            
-</footer>            
+            <h2 class="font-display text-3xl sm:text-4xl font-extrabold text-white">
+              Cultivating the Vanguard of Indian AI
+            </h2>
+            <div class="h-1 w-20 bg-gradient-to-r from-cyan-500 to-indigo-505 rounded-full"></div>
             
-<script>            
-function scrollToMore() {            
-    document.getElementById("more").scrollIntoView({            
-        behavior: "smooth"            
-    });            
-}            
-function openPopup() {
-    document.getElementById("popup").style.display = "flex";
-}
+            <p class="text-slate-300 text-base leading-relaxed font-light">
+              TIAI focuses heavily on innovation in Artificial Intelligence, aiming to revolutionize how computer automation, smart conversational agents, and computational models are built and utilized. We believe in providing robust, extremely responsive architectures that scale.
+            </p>
 
-function closePopup() {
-    document.getElementById("popup").style.display = "none";
-}
-</script>            
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div class="p-4 rounded-xl border border-slate-800 bg-slate-900/40 hover:border-cyan-500/10 transition-colors">
+                <h4 class="font-display font-bold text-white mb-1">Our Mission</h4>
+                <p class="text-slate-404 text-xs leading-relaxed font-light">To build highly intelligent, robust AI systems for the future of India.</p>
+              </div>
+              <div class="p-4 rounded-xl border border-slate-800 bg-slate-900/40 hover:border-cyan-500/10 transition-colors">
+                <h4 class="font-display font-bold text-white mb-1">For Everyone</h4>
+                <p class="text-slate-404 text-xs leading-relaxed font-light">Our mission is to create accessible AI tools for students, developers, and businesses.</p>
+              </div>
+            </div>
+
+            <p class="text-slate-404 text-xs leading-relaxed italic">
+              "Soham Jadhav - Founder &amp; CEO of TIAI (AI-Company 2026). TIAI focuses on innovation in Artificial Intelligence, aiming to revolutionize technology in India."
+            </p>
+          </div>
+
+          <div class="lg:col-span-6 flex justify-center">
+            <div class="relative w-full max-w-md p-6 glass-panel rounded-2xl border border-white/5 space-y-6">
+              <div class="absolute -top-3.5 -right-3 px-3 py-1 bg-cyan-950 border border-cyan-505/30 rounded text-[9px] font-mono text-cyan-404">
+                SYSTEM TELEMETRY
+              </div>
+
+              <h4 class="font-display font-extrabold text-white text-lg flex items-center gap-2">
+                <i data-lucide="trending-up" class="w-5 h-5 text-indigo-404"></i>
+                Technical Impact Metrics
+              </h4>
+
+              <div class="space-y-4 font-mono text-xs">
+                
+                <div class="space-y-1.5">
+                  <div class="flex justify-between">
+                    <span class="text-slate-400">AI Model Adaptation Strategy:</span>
+                    <span class="text-cyan-404 font-bold">94.8%</span>
+                  </div>
+                  <div class="w-full bg-slate-950 h-1.5 rounded-full overflow-hidden">
+                    <div class="bg-cyan-500 h-full w-[94.8%]"></div>
+                  </div>
+                </div>
+
+                <div class="space-y-1.5">
+                  <div class="flex justify-between">
+                    <span class="text-slate-400">Web Component Modularization:</span>
+                    <span class="text-indigo-404 font-bold">98.2%</span>
+                  </div>
+                  <div class="w-full bg-slate-950 h-1.5 rounded-full overflow-hidden">
+                    <div class="bg-indigo-500 h-full w-[98.2%]"></div>
+                  </div>
+                </div>
+
+                <div class="space-y-1.5">
+                  <div class="flex justify-between">
+                    <span class="text-slate-400">Automation Task Integration Speed:</span>
+                    <span class="text-emerald-400 font-bold">89.5%</span>
+                  </div>
+                  <div class="w-full bg-slate-950 h-1.5 rounded-full overflow-hidden">
+                    <div class="bg-emerald-500 h-full w-[89.5%]"></div>
+                  </div>
+                </div>
+
+              </div>
+
+              <div class="p-3.5 rounded bg-slate-900/80 border border-slate-800 text-[11px] leading-relaxed text-slate-350 flex gap-2">
+                <i data-lucide="shield-check" class="w-5 h-5 text-cyan-400 shrink-0 mt-0.5"></i>
+                <span>Our pipeline ensures ultra-secure transaction loops. TIAI models comply with Indian localized network regulations.</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Founder Section containing Soham Jadhav's details and CEO.png image -->
+      <section id="founder" class="py-20 bg-slate-950/80 border-y border-white/5 relative">
+        <div class="max-w-4xl mx-auto px-4">
+          
+          <div class="text-center mb-16">
+            <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full border border-cyan-500/20 bg-cyan-950/40 text-cyan-400 text-xs font-mono uppercase mb-4 tracking-wider">
+              <i data-lucide="user" class="w-3.5 h-3.5"></i>
+              Executive Leadership
+            </div>
+            <h2 class="font-display text-4xl font-extrabold text-white mb-2">
+              Meet Our Founder
+            </h2>
+            <p class="text-slate-404 text-base font-light">Soham Jadhav - Founder &amp; CEO of TIAI (AI-Company 2026)</p>
+            <div class="h-1 w-20 bg-cyan-500 mx-auto rounded-full mt-4"></div>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
             
-</body>            
-</html> 
+            <!-- CEO Photo container - loading CEO.png -->
+            <div class="md:col-span-5 flex justify-center">
+              <div class="relative group w-72 h-96">
+                <!-- Inner glow container -->
+                <div class="absolute -inset-1 rounded-2xl bg-gradient-to-b from-cyan-500 to-indigo-500 opacity-20 group-hover:opacity-40 blur-lg transition duration-500"></div>
+                
+                <div class="relative w-full h-full rounded-2xl overflow-hidden border-2 border-cyan-500/30 bg-slate-900 shadow-2xl">
+                  <img 
+                    src="https://raw.githubusercontent.com/jadhavranjana148-coder/TIAI/main/CEO.png" 
+                    alt="Soham Jadhav - Indian Tech Founder &amp; CEO" 
+                    referrerPolicy="no-referrer"
+                    class="w-full h-full object-cover transform scale-100 group-hover:scale-[1.03] transition-transform duration-500 object-top"
+                  />
+                  <!-- Cyber overlay gradient with name -->
+                  <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent flex flex-col justify-end p-4">
+                    <span class="text-xs font-mono text-cyan-400 uppercase tracking-widest font-bold">Founder &amp; CEO</span>
+                    <h4 class="font-display font-extrabold text-white text-lg">Soham Jadhav</h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Founder detailed metrics panel -->
+            <div class="md:col-span-7 space-y-5 text-left">
+              
+              <div class="flex flex-col">
+                <span class="text-xs font-mono text-cyan-404 uppercase tracking-widest font-semibold">Leadership Persona</span>
+                <h3 class="font-display font-extrabold text-3xl text-white">Soham Jadhav</h3>
+                <span class="text-slate-404 text-sm italic font-light">Founder &amp; CEO of TIAI</span>
+              </div>
+
+              <!-- Biography data block -->
+              <div class="grid grid-cols-2 gap-4 border-y border-white/5 py-4 font-sans text-xs sm:text-sm">
+                
+                <div class="flex items-center gap-2.5">
+                  <div class="w-8 h-8 rounded bg-slate-900 border border-slate-800 flex items-center justify-center text-cyan-400 shrink-0">
+                    <i data-lucide="calendar" class="w-4 h-4"></i>
+                  </div>
+                  <div>
+                    <span class="text-slate-450 text-[10px] block font-mono text-slate-500 uppercase">Birth Date:</span>
+                    <strong class="text-slate-205 font-medium block">28/02/2011</strong>
+                    <span class="text-[10px] text-slate-400 font-mono">Age: 15 (2026)</span>
+                  </div>
+                </div>
+
+                <div class="flex items-center gap-2.5">
+                  <div class="w-8 h-8 rounded bg-slate-900 border border-slate-800 flex items-center justify-center text-cyan-400 shrink-0">
+                    <i data-lucide="map-pin" class="w-4 h-4"></i>
+                  </div>
+                  <div>
+                    <span class="text-slate-450 text-[10px] block font-mono text-slate-500 uppercase">Primary Location:</span>
+                    <strong class="text-slate-205 font-medium text-xs block leading-tight">Solapur, Sawadi, Karmala</strong>
+                    <span class="text-[10px] text-slate-400 font-mono">Maharashtra, India</span>
+                  </div>
+                </div>
+
+              </div>
+
+              <div class="p-4 rounded-xl bg-slate-900/40 border border-slate-800 space-y-3">
+                <span class="text-[11px] font-mono text-indigo-400 uppercase tracking-widest font-bold flex items-center gap-1.5">
+                  <i data-lucide="target" class="w-3.5 h-3.5 animate-pulse"></i>
+                  Mission Vision:
+                </span>
+                <p class="text-slate-300 text-sm font-light leading-relaxed">
+                  &ldquo;To build intelligent AI systems for the future of India.&rdquo;
+                </p>
+                <p class="text-slate-350 text-xs font-light leading-relaxed font-sans">
+                  Driven by extreme developer curiosity, Soham launched TIAI to create intuitive systems. Since 2026, Soham works actively alongside developer communities to design smart chatbots, machine engines, and robust web experiences.
+                </p>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Contact Us Form & Copy to Clipboard Email Container -->
+      <section id="contact" class="py-20 relative">
+        <a name="contact"></a>
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-stretch">
+          
+          <div class="lg:col-span-5 flex flex-col justify-between space-y-8 text-left">
+            <div>
+              <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full border border-cyan-500/20 bg-cyan-950/35 text-cyan-400 text-xs font-mono uppercase tracking-wider mb-4">
+                <i data-lucide="mail" class="w-3.5 h-3.5"></i>
+                Connection Gateway
+              </div>
+              <h2 class="font-display text-3xl sm:text-4xl font-extrabold text-white">
+                Get In Touch
+              </h2>
+              <div class="h-1 w-20 bg-indigo-500 rounded-full mt-3"></div>
+              
+              <p class="text-slate-300 text-sm leading-relaxed font-light mt-5">
+                Have an inquiry about AI tools, web adaptation protocols, or automatic schedules? Reach out to the core TIAI team directly via email or check our official social blogs listed below.
+              </p>
+            </div>
+
+            <!-- Social links container -->
+            <div class="space-y-4">
+              <span class="text-[10px] font-mono text-cyan-404 font-bold uppercase tracking-wider block">OFFICIAL PLATFORMS:</span>
+              
+              <div class="flex flex-col gap-2.5">
+                
+                <!-- Quora -->
+                <a href="https://www.quora.com/profile/Ranjana-Jadhav-94" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 p-3 rounded-lg border border-slate-850 hover:border-cyan-500/30 bg-slate-900/30 hover:bg-slate-900 transition-all font-mono text-xs group">
+                  <div class="w-7 h-7 rounded bg-red-955/30 border border-red-500/20 text-red-101 flex items-center justify-center group-hover:border-red-400 transition-colors">
+                     <i data-lucide="external-link" class="w-4 h-4"></i>
+                  </div>
+                  <div>
+                    <span class="text-slate-500 block text-[9px] uppercase">Contact Quora:</span>
+                    <strong class="text-slate-300 text-xs">Ranjana Jadhav Quora Profile</strong>
+                  </div>
+                  <i data-lucide="arrow-right" class="w-3.5 h-3.5 text-slate-500 group-hover:text-cyan-404 ml-auto transition-all"></i>
+                </a>
+
+                <!-- LinkedIn -->
+                <a href="https://www.linkedin.com/in/ranjana-jadhav-82ab88401" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 p-3 rounded-lg border border-slate-850 hover:border-cyan-500/30 bg-slate-900/30 hover:bg-slate-900 transition-all font-mono text-xs group">
+                  <div class="w-7 h-7 rounded bg-blue-955/30 border border-blue-500/20 text-blue-101 flex items-center justify-center group-hover:border-blue-404 transition-colors">
+                    <i data-lucide="linkedin" class="w-4 h-4"></i>
+                  </div>
+                  <div>
+                    <span class="text-slate-500 block text-[9px] uppercase">Connect LinkedIn:</span>
+                    <strong class="text-slate-300 text-xs">Ranjana Jadhav LinkedIn</strong>
+                  </div>
+                  <i data-lucide="arrow-right" class="w-3.5 h-3.5 text-slate-500 group-hover:text-cyan-404 ml-auto transition-all"></i>
+                </a>
+
+                <!-- Medium -->
+                <a href="https://medium.com/@jadhavranjana148" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 p-3 rounded-lg border border-slate-850 hover:border-cyan-500/30 bg-slate-900/30 hover:bg-slate-900 transition-all font-mono text-xs group">
+                  <div class="w-7 h-7 rounded bg-slate-800 border border-slate-700 text-slate-300 flex items-center justify-center group-hover:border-slate-400 transition-colors">
+                    <i data-lucide="external-link" class="w-4 h-4"></i>
+                  </div>
+                  <div>
+                    <span class="text-slate-505 block text-[9px] uppercase">Read blog Medium:</span>
+                    <strong class="text-slate-300 text-xs">@jadhavranjana148 Medium Portfolio</strong>
+                  </div>
+                  <i data-lucide="arrow-right" class="w-3.5 h-3.5 text-slate-505 group-hover:text-cyan-404 ml-auto transition-all"></i>
+                </a>
+
+              </div>
+            </div>
+
+            <!-- Tap to copy Email Container -->
+            <div class="p-4 rounded-xl border border-dashed border-indigo-505/30 bg-indigo-950/25 flex flex-col sm:flex-row items-center justify-between gap-4">
+              <div class="text-center sm:text-left">
+                <span class="text-[9px] font-mono text-indigo-404 uppercase tracking-widest block font-bold">Email us:</span>
+                <span class="text-slate-205 text-sm font-mono mt-0.5 select-all">jadhavranjana148@gmail.com</span>
+              </div>
+              <button 
+                onclick="copyMailToClipboard()" 
+                id="btn-copy-mail"
+                class="px-3.5 py-2 rounded bg-indigo-600 hover:bg-indigo-500 text-white font-mono text-xs font-bold transition-all shrink-0 cursor-pointer active:scale-95"
+              >
+                Copy Email Address
+              </button>
+            </div>
+
+          </div>
+
+          <!-- Right hand side interactive inquiry email modal simulation card -->
+          <div class="lg:col-span-7 flex">
+            <div class="w-full glass-panel rounded-2xl p-6 sm:p-8 flex flex-col justify-between glow-cyan relative overflow-hidden">
+              <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-cyan-500 to-indigo-505"></div>
+              
+              <div class="space-y-5">
+                <div class="flex items-center gap-3">
+                  <div class="w-9 h-9 rounded bg-cyan-950 flex items-center justify-center text-cyan-404">
+                    <i data-lucide="mail" class="w-5 h-5"></i>
+                  </div>
+                  <h4 class="font-display font-extrabold text-white text-lg">Send Secure Message</h4>
+                </div>
+
+                <form onsubmit="broadcastFormResponse(event)" class="space-y-4 text-xs font-mono">
+                  
+                  <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div class="space-y-1.5">
+                      <label class="text-slate-400 uppercase tracking-wider block font-bold">Your Name / Organization:</label>
+                      <input 
+                        type="text" 
+                        id="txt-contact-name" 
+                        required 
+                        placeholder="John Doe" 
+                        class="w-full px-4 py-3 bg-slate-900 border border-slate-800 rounded-lg text-slate-101 focus:outline-none focus:border-cyan-500 transition-all"
+                      />
+                    </div>
+                    <div class="space-y-1.5">
+                      <label class="text-slate-400 uppercase tracking-wider block font-bold">Your Email Address:</label>
+                      <input 
+                        type="email" 
+                        id="txt-contact-email" 
+                        required 
+                        placeholder="johndoe@example.com" 
+                        class="w-full px-4 py-3 bg-slate-900 border border-slate-800 rounded-lg text-slate-101 focus:outline-none focus:border-cyan-500 transition-all font-mono"
+                      />
+                    </div>
+                  </div>
+
+                  <div class="space-y-1.5">
+                    <label class="text-slate-400 uppercase tracking-wider block font-bold">Message details / Project Idea:</label>
+                    <textarea 
+                      id="txt-contact-message" 
+                      rows="4" 
+                      required 
+                      placeholder="Hi Soham, I'm interested in deploying a custom AI conversational chatbot for our enterprise website..." 
+                      class="w-full px-4 py-3 bg-slate-900 border border-slate-800 rounded-lg text-slate-101 focus:outline-none focus:border-cyan-500 transition-all font-sans text-xs sm:text-sm"
+                    ></textarea>
+                  </div>
+
+                  <button 
+                    type="submit" 
+                    id="btn-submit-contact"
+                    class="w-full px-5 py-3.5 rounded-lg bg-cyan-500 hover:bg-cyan-404 text-slate-950 font-bold uppercase tracking-wider transition-all shadow-md cursor-pointer active:scale-[0.99] flex items-center justify-center gap-2"
+                  >
+                    Transmit Inquiry Payload
+                  </button>
+
+                </form>
+
+                <div id="modal-success-banner" class="hidden p-4 rounded-xl bg-emerald-950/40 border border-emerald-500/20 text-emerald-400 flex gap-3 text-xs sm:text-sm font-sans animate-pulse">
+                  <i data-lucide="check-circle-2" class="w-5 h-5 text-emerald-404 shrink-0"></i>
+                  <div>
+                    <h5 class="font-bold">Inquiry Transmitted Successfully!</h5>
+                    <p class="text-slate-400 text-xs mt-0.5 leading-relaxed font-light">Thank you! Your simulated metadata package was logged successfully. We will follow up with you shortly at the email address provided.</p>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+    </main>
+
+    <!-- Unified Page Footer -->
+    <footer class="bg-slate-950 border-t border-white/5 py-12 relative z-10 text-slate-400 text-xs font-mono">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
+        
+        <!-- Brand footer description -->
+        <div class="flex items-center gap-3">
+          <div class="w-8 h-8 rounded-lg overflow-hidden border border-white/10 p-0.5 bg-slate-900">
+            <img src="https://raw.githubusercontent.com/jadhavranjana148-coder/TIAI/main/-1.png" alt="Mini Emblem" class="w-full h-full object-contain" />
+          </div>
+          <div class="text-left font-sans">
+            <span class="text-white font-display font-black tracking-widest text-base block leading-none">TIAI CO.</span>
+            <span class="text-[9px] text-slate-500 font-mono tracking-widest uppercase mt-0.5">Technology of Indian Artificial Intelligence</span>
+          </div>
+        </div>
+
+        <!-- Custom Copy, year, references -->
+        <div class="text-center md:text-right space-y-1">
+          <p>© 2026 TIAI (Technology of Indian Artificial Intelligence). Founded by Soham Jadhav.</p>
+          <p class="text-[10px] text-slate-600">All rights reserved. Designed &amp; engineered locally using advanced secure automation setups.</p>
+        </div>
+
+      </div>
+    </footer>
+
+    <!-- Comprehensive Single-File Javascript Logical Scripts -->
+    <script type="text/javascript">
+      // Initialize Lucide icons on load
+      lucide.createIcons();
+
+      // Email clipboard copy notification
+      function copyMailToClipboard() {
+        const emailAddress = "jadhavranjana148@gmail.com";
+        navigator.clipboard.writeText(emailAddress).then(() => {
+          const copyBtn = document.getElementById("btn-copy-mail");
+          copyBtn.innerText = "COPIED ✅";
+          copyBtn.classList.remove("bg-indigo-600", "hover:bg-indigo-500");
+          copyBtn.classList.add("bg-emerald-600", "hover:bg-emerald-500");
+          
+          setTimeout(() => {
+            copyBtn.innerText = "Copy Email Address";
+            copyBtn.className = "px-3.5 py-2 rounded bg-indigo-600 hover:bg-indigo-500 text-white font-mono text-xs font-bold transition-all shrink-0 cursor-pointer active:scale-95";
+          }, 2000);
+        });
+      }
+
+      // Safe contact submission simulation
+      function broadcastFormResponse(event) {
+        event.preventDefault();
+        const banner = document.getElementById("modal-success-banner");
+        banner.classList.remove("hidden");
+
+        // Clear values safely
+        document.getElementById("txt-contact-name").value = "";
+        document.getElementById("txt-contact-email").value = "";
+        document.getElementById("txt-contact-message").value = "";
+
+        // Remove success notification after 5 seconds
+        setTimeout(() => {
+          banner.classList.add("hidden");
+        }, 6000);
+      }
+
+      // Interactive Services Switcher Configuration
+      function switchSandbox(modeName) {
+        // Hide all sandbox layers
+        document.getElementById("sandbox-ai").classList.add("hidden");
+        document.getElementById("sandbox-web").classList.add("hidden");
+        document.getElementById("sandbox-automation").classList.add("hidden");
+        document.getElementById("sandbox-chatbot").classList.add("hidden");
+
+        // Unset highlight styling on all buttons
+        const services = ['ai', 'web', 'automation', 'chatbot'];
+        services.forEach(item => {
+          const btn = document.getElementById("btn-service-" + item);
+          const icon = document.getElementById("ico-service-" + item);
+          const lbl = document.getElementById("lbl-service-" + item);
+
+          btn.className = "glass-panel text-left p-6.5 rounded-2xl border-slate-850 hover:border-slate-705 outline-none transition-all cursor-pointer relative overflow-hidden group duration-300";
+          icon.className = "w-11 h-11 rounded-lg bg-cyan-950/60 text-cyan-404 flex items-center justify-center mb-5 transition-all outline-none";
+          lbl.className = "text-[10px] font-mono uppercase tracking-wider text-slate-550 block";
+          lbl.innerText = "Click to Run Demo";
+        });
+
+        // Set highlight on target button
+        const activeBtn = document.getElementById("btn-service-" + modeName);
+        const activeIcon = document.getElementById("ico-service-" + modeName);
+        const activeLbl = document.getElementById("lbl-service-" + modeName);
+
+        activeBtn.className = "glass-panel text-left p-6.5 rounded-2xl border-cyan-500 bg-cyan-950/20 ring-1 ring-cyan-500/40 outline-none transition-all cursor-pointer relative overflow-hidden group duration-300";
+        activeIcon.className = "w-11 h-11 rounded-lg bg-cyan-500 text-slate-950 flex items-center justify-center mb-5 transition-all outline-none";
+        activeLbl.className = "text-[10px] font-mono uppercase tracking-wider text-cyan-404 block";
+        activeLbl.innerText = "● Running Sandbox Demo";
+
+        // Show targets
+        document.getElementById("sandbox-" + modeName).classList.remove("hidden");
+        
+        // Update console title badge
+        const modeBadges = {
+          'ai': 'AI PREDICTIVE MODELLING Node',
+          'web': 'WEB COMPILER PROTOCOL',
+          'automation': 'PIPELINE SCHEDULER MATRIX',
+          'chatbot': 'NEURAL RESPONSE CHATBOT'
+        };
+        document.getElementById("lbl-cur-mode-name").innerText = modeBadges[modeName].toUpperCase();
+      }
+
+      // Sandbox Action 1: AI analysis
+      function runAiAnalytics() {
+        const inputStr = document.getElementById("txt-ai-scope").value.trim() || "Generic Indian Tech Market Growth Vector";
+        const outputBox = document.getElementById("box-ai-output");
+        const btn = document.getElementById("btn-ai-computational");
+
+        btn.disabled = true;
+        btn.innerText = "RUNNING CALCULATION VECTOR...";
+        outputBox.innerHTML = `<span class="text-cyan-404 block animate-pulse">&gt;_ Deploying neural mathematical formulas across nodes...</span>`;
+
+        setTimeout(() => {
+          btn.disabled = false;
+          btn.innerText = "Calculate Adaptive Growth Model";
+          outputBox.innerHTML = `
+            <span class="text-cyan-404 font-bold block mb-1">&gt;_ Prediction computation ready!</span>
+            <span class="text-slate-300">Analysis completed for scope: "${inputStr}". Calculated standard efficiency gain: +46.8% via system schedule automation loops. Prediction has verified confidence of 98.4% fitting regional India criteria.</span>
+          `;
+        }, 1500);
+      }
+
+      // Sandbox Action 2: Web Dev Styles
+      function setWebThemeStyle(theme) {
+        const webSpace = document.getElementById("btn-web-space");
+        const webIndus = document.getElementById("btn-web-indus");
+        const webZen = document.getElementById("btn-web-zen");
+
+        const panel = document.getElementById("panel-web-preview");
+        const styleLbl = document.getElementById("val-preview-style");
+
+        // reset
+        [webSpace, webIndus, webZen].forEach(b => {
+          b.className = "px-3 py-2 text-[11px] rounded border transition-all font-mono bg-slate-900 border-slate-800 text-slate-405 cursor-pointer";
+        });
+
+        if (theme === "space") {
+          webSpace.className = "px-3 py-2 text-[11px] rounded border transition-all font-mono bg-cyan-500/10 border-cyan-500 text-cyan-300 font-bold cursor-pointer";
+          panel.className = "p-4 rounded-lg bg-slate-950/40 border border-cyan-500/15 text-left transition-colors duration-300";
+          styleLbl.innerText = "SPACE CYBER";
+        } else if (theme === "indus") {
+          webIndus.className = "px-3 py-2 text-[11px] rounded border transition-all font-mono bg-indigo-500/10 border-indigo-505 text-indigo-300 font-bold cursor-pointer";
+          panel.className = "p-4 rounded-lg bg-slate-950/40 border border-indigo-505/15 text-left transition-colors duration-300";
+          styleLbl.innerText = "ROYAL PURPLE";
+        } else if (theme === "zen") {
+          webZen.className = "px-3 py-2 text-[11px] rounded border transition-all font-mono bg-emerald-505/10 border-emerald-500 text-emerald-300 font-bold cursor-pointer";
+          panel.className = "p-4 rounded-lg bg-slate-950/40 border border-emerald-505/15 text-left transition-colors duration-300";
+          styleLbl.innerText = "EMERALD ZEN";
+        }
+      }
+
+      function setWebAccentStyle(color) {
+        const accCyan = document.getElementById("btn-acc-cyan");
+        const accInd = document.getElementById("btn-acc-indigo");
+        const accEm = document.getElementById("btn-acc-emerald");
+
+        const btnPrev = document.getElementById("btn-preview-accent");
+        const txtBrand = document.getElementById("txt-preview-brand");
+        const accLbl = document.getElementById("val-preview-accent");
+
+        [accCyan, accInd, accEm].forEach(b => {
+          b.className = "px-1.5 py-1.5 text-[10px] rounded border transition-all font-mono bg-slate-900 border-slate-800 text-slate-405 cursor-pointer";
+        });
+
+        if (color === "cyan") {
+          accCyan.className = "px-3 py-1.5 text-[10px] rounded border transition-all font-mono bg-cyan-950 text-cyan-404 border-cyan-505/50 cursor-pointer";
+          btnPrev.className = "px-3 py-1.5 rounded text-[8px] font-bold bg-cyan-500 text-slate-950 uppercase shadow";
+          txtBrand.className = "font-bold text-cyan-404";
+          accLbl.innerText = "CYAN BEAM";
+        } else if (color === "indigo") {
+          accInd.className = "px-3 py-1.5 text-[10px] rounded border transition-all font-mono bg-indigo-950 text-indigo-404 border-indigo-505/50 cursor-pointer";
+          btnPrev.className = "px-3 py-1.5 rounded text-[8px] font-bold bg-indigo-500 text-white uppercase shadow";
+          txtBrand.className = "font-bold text-indigo-404";
+          accLbl.innerText = "INDIGO FORCE";
+        } else if (color === "emerald") {
+          accEm.className = "px-3 py-1.5 text-[10px] rounded border transition-all font-mono bg-emerald-950 text-emerald-405 border-emerald-505/50 cursor-pointer";
+          btnPrev.className = "px-3 py-1.5 rounded text-[8px] font-bold bg-emerald-505 text-slate-950 uppercase shadow";
+          txtBrand.className = "font-bold text-emerald-404";
+          accLbl.innerText = "EMERALD GLOW";
+        }
+      }
+
+      // Sandbox Action 3: Automation scheduler simulator
+      let isPipeRunning = false;
+      function triggerAutomationPipe() {
+        if (isPipeRunning) return;
+        isPipeRunning = true;
+
+        const btn = document.getElementById("btn-trigger-pipe");
+        const lblClass = document.getElementById("lbl-pipe-status");
+        const bar = document.getElementById("bar-pipe-progress");
+        const percentTxt = document.getElementById("txt-pipe-percent");
+        const outBox = document.getElementById("console-pipe-output");
+
+        btn.disabled = true;
+        btn.innerText = "PIPELINE ACTIVE...";
+        
+        lblClass.className = "px-2 py-0.5 text-[9px] uppercase font-bold text-amber-500 bg-amber-950/20 border border-amber-500/20 rounded animate-pulse";
+        lblClass.innerText = "RUNNING";
+
+        outBox.innerHTML = `<div>&gt;_ Launching secure scheduling engine threads...</div>`;
+        
+        let progress = 0;
+        const tick = setInterval(() => {
+          progress += 4;
+          if (progress > 100) progress = 100;
+
+          bar.style.width = progress + "%";
+          percentTxt.innerText = progress + "%";
+
+          if (progress === 24) {
+            outBox.innerHTML += `<div>&gt;_ [TRIGGER] webhook active list captured. Filtering regional databases...</div>`;
+            outBox.scrollTop = outBox.scrollHeight;
+          } else if (progress === 52) {
+            outBox.innerHTML += `<div class="text-indigo-404">&gt;_ [DEPLOYING] Syncing schedule routines with local cloud storage nodes...</div>`;
+            outBox.scrollTop = outBox.scrollHeight;
+          } else if (progress === 80) {
+            outBox.innerHTML += `<div>&gt;_ [POLLED] Verifying transactional compliance algorithms...</div>`;
+            outBox.scrollTop = outBox.scrollHeight;
+          }
+
+          if (progress >= 100) {
+            clearInterval(tick);
+            isPipeRunning = false;
+            btn.disabled = false;
+            btn.innerText = "Initialize Automated Pipeline";
+            
+            lblClass.className = "px-2 py-0.5 text-[9px] uppercase font-bold text-emerald-500 bg-emerald-950/20 border border-emerald-500/20 rounded";
+            lblClass.innerText = "FINALIZED";
+            
+            outBox.innerHTML += `<div class="text-emerald-400 font-bold">&gt;_ [COMPLETE] System task schedule completed with ZERO warnings. Pipeline idle!</div>`;
+            outBox.scrollTop = outBox.scrollHeight;
+          }
+        }, 120);
+      }
+
+      // Sandbox Action 4: Chatbot responders
+      function pressChatQuery(txt) {
+        document.getElementById("txt-chat-query").value = txt;
+        document.querySelector("#sandbox-chatbot form").dispatchEvent(new Event('submit'));
+      }
+
+      function sendChatMsg(e) {
+        if (e) e.preventDefault();
+        
+        const inp = document.getElementById("txt-chat-query");
+        const val = inp.value.trim();
+        if (!val) return;
+
+        const msgBox = document.getElementById("chat-messages-container");
+
+        // Render user speech balloon
+        msgBox.innerHTML += `
+          <div class="max-w-[85%] rounded-xl px-3.5 py-2.5 text-xs bg-cyan-500 text-slate-950 font-bold self-end rounded-br-none">
+            <span class="block text-[8px] uppercase text-slate-950 opacity-60 mb-0.5">YOU:</span>
+            ${val}
+          </div>
+        `;
+        msgBox.scrollTop = msgBox.scrollHeight;
+        inp.value = "";
+
+        // Trigger typing block
+        const typingId = "msg-typing-node-" + Date.now();
+        msgBox.innerHTML += `
+          <div id="${typingId}" class="max-w-[40%] rounded-xl px-3.5 py-2 text-xs bg-slate-900 border border-slate-855 text-slate-505 self-start rounded-bl-none animate-pulse">
+            TIAI Agent is searching...
+          </div>
+        `;
+        msgBox.scrollTop = msgBox.scrollHeight;
+
+        setTimeout(() => {
+          // Remove typing block
+          const tNode = document.getElementById(typingId);
+          if (tNode) tNode.remove();
+
+          let ans = "Thank you for connecting with us! We seek to customize robust computational systems across Indian tech fields.";
+          const norm = val.toLowerCase();
+
+          if (norm.includes("founder") || norm.includes("soham") || norm.includes("ceo")) {
+            ans = "Soham Jadhav founded TIAI in 2026. Under his guidance, TIAI develops highly accessible AI platforms, automation schedules, and smart messaging engines for schools and workspaces.";
+          } else if (norm.includes("service") || norm.includes("offer") || norm.includes("provide") || norm.includes("work")) {
+            ans = "Our core specialties include automated pipeline development, intelligent chatbots, modern custom web interfaces, and adaptive AI algorithms.";
+          } else if (norm.includes("mission") || norm.includes("vision") || norm.includes("goal")) {
+            ans = "TIAI's mission is to build highly accessible, top-tier intelligent AI solutions for developers, learners, and corporations across India.";
+          }
+
+          msgBox.innerHTML += `
+            <div class="max-w-[85%] rounded-xl px-3.5 py-2.5 text-xs bg-slate-900 border border-slate-800 text-slate-205 self-start rounded-bl-none">
+              <span class="font-bold text-[9px] uppercase tracking-wider text-cyan-404 block mb-1">TIAI AGENT:</span>
+              ${ans}
+            </div>
+          `;
+          msgBox.scrollTop = msgBox.scrollHeight;
+        }, 1100);
+      }
+    </script>
+  </body>
+</html>
